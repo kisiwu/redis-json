@@ -19,6 +19,7 @@ interface IRedisClient extends IRedisMethods {
 interface IJSONCache<T> {
   set(key: string, obj: T, options: ISetOptions): Promise<any>;
   get(key: string, ...fields: string[]): Promise<Partial<T> | undefined>;
+  del(key: string): Promise<[any, any]>;
   rewrite(key: string, obj: T): Promise<any>;
   clearAll(): Promise<any>;
 }
@@ -150,6 +151,19 @@ export default class JSONCache<T = any> implements IJSONCache<T> {
     }
 
     return this.flattener.unflatten(result) as T;
+  }
+
+  /**
+   * Removes/deletes the entire hashset for the given
+   * key in the JSON Cache.
+   *
+   * @param key Redis key
+   */
+  public async del(key: string): Promise<[any, any]> {
+    return await Promise.all([
+      this.redisClientInt.del(this.getKey(key)),
+      this.redisClientInt.del(this.getTypeKey(key))
+    ]);
   }
 
   /**

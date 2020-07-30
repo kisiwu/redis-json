@@ -79,7 +79,8 @@ export class Flattener implements IFlattener {
     if (!(target instanceof Object)) return result;
 
     const entries = Object.entries(target);
-    if (entries.length > 0) {
+    const constructorName = target.constructor.name;
+    if (entries.length > 0 && !this.stringifier[constructorName]) {
       entries.forEach(([key, val]) => {
         const encodedKey = encodeKey(key);
 
