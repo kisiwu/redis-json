@@ -1,6 +1,6 @@
 [redis-json](../README.md) › [JSONCache](jsoncache.md)
 
-# Class: JSONCache <**T**>
+# Class: JSONCache ‹**T**›
 
 JSONCache eases the difficulties in storing a JSON in redis.
 
@@ -56,7 +56,7 @@ field.
 
 \+ **new JSONCache**(`redisClient`: any, `options`: [IOptions](../interfaces/ioptions.md)): *[JSONCache](jsoncache.md)*
 
-Defined in src/lib/jsonCache.ts:52
+*Defined in [src/lib/jsonCache.ts:55](https://github.com/kisiwu/redis-json/blob/aab402a/src/lib/jsonCache.ts#L55)*
 
 Intializes JSONCache instance
 
@@ -75,7 +75,7 @@ Name | Type | Default | Description |
 
 ▸ **clearAll**(): *Promise‹any›*
 
-Defined in src/lib/jsonCache.ts:184
+*Defined in [src/lib/jsonCache.ts:184](https://github.com/kisiwu/redis-json/blob/aab402a/src/lib/jsonCache.ts#L184)*
 
 Removes/deletes all the keys in the JSON Cache,
 having the prefix.
@@ -86,19 +86,20 @@ ___
 
 ###  del
 
-▸ **del**(`key`: string): *Promise<[any, any]>*
+▸ **del**(`key`: string): *Promise‹[any, any]›*
 
-Defined in src/lib/jsonCache.ts:115
+*Defined in [src/lib/jsonCache.ts:162](https://github.com/kisiwu/redis-json/blob/aab402a/src/lib/jsonCache.ts#L162)*
 
-Removes/deletes the entire hashset for the given key in the JSON Cache.
+Removes/deletes the entire hashset for the given
+key in the JSON Cache.
 
 **Parameters:**
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`key` | string | Redis key |
+`key` | string | Redis key  |
 
-**Returns:** *Promise<[any, any]>*
+**Returns:** *Promise‹[any, any]›*
 
 ___
 
@@ -106,7 +107,7 @@ ___
 
 ▸ **get**(`key`: string, ...`fields`: string[]): *Promise‹Partial‹T› | undefined›*
 
-Defined in src/lib/jsonCache.ts:116
+*Defined in [src/lib/jsonCache.ts:116](https://github.com/kisiwu/redis-json/blob/aab402a/src/lib/jsonCache.ts#L116)*
 
 Retrieves the hashset from redis and
 unflattens it back to the original Object
@@ -128,7 +129,7 @@ ___
 
 ▸ **rewrite**(`key`: string, `obj`: T): *Promise‹any›*
 
-Defined in src/lib/jsonCache.ts:175
+*Defined in [src/lib/jsonCache.ts:175](https://github.com/kisiwu/redis-json/blob/aab402a/src/lib/jsonCache.ts#L175)*
 
 Replace the entire hashset for the given key
 
@@ -147,7 +148,7 @@ ___
 
 ▸ **set**(`key`: string, `obj`: T, `options`: [ISetOptions](../interfaces/isetoptions.md)): *Promise‹any›*
 
-Defined in src/lib/jsonCache.ts:90
+*Defined in [src/lib/jsonCache.ts:90](https://github.com/kisiwu/redis-json/blob/aab402a/src/lib/jsonCache.ts#L90)*
 
 Flattens the given json object and
 stores it in Redis hashset
