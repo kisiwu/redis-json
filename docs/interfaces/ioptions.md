@@ -22,7 +22,7 @@ JSONCache options
 
 • **parser**? : *[IParser](iparser.md)*
 
-*Defined in [src/interfaces.ts:42](https://github.com/kisiwu/redis-json/blob/aab402a/src/interfaces.ts#L42)*
+*Defined in [src/interfaces.ts:42](https://github.com/kisiwu/redis-json/blob/4e77002/src/interfaces.ts#L42)*
 
 Parser will be used to convert the string
 back to custom object when `get` is called
@@ -33,7 +33,7 @@ ___
 
 • **prefix**? : *undefined | string*
 
-*Defined in [src/interfaces.ts:30](https://github.com/kisiwu/redis-json/blob/aab402a/src/interfaces.ts#L30)*
+*Defined in [src/interfaces.ts:30](https://github.com/kisiwu/redis-json/blob/4e77002/src/interfaces.ts#L30)*
 
 Custom prefix to be used for storage
 namespace separation
@@ -44,7 +44,7 @@ ___
 
 • **stringifier**? : *[IStringifier](istringifier.md)*
 
-*Defined in [src/interfaces.ts:36](https://github.com/kisiwu/redis-json/blob/aab402a/src/interfaces.ts#L36)*
+*Defined in [src/interfaces.ts:36](https://github.com/kisiwu/redis-json/blob/4e77002/src/interfaces.ts#L36)*
 
 Stringifier will be used to convert a custom
 object to a string when `set` is called

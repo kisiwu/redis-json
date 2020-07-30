@@ -65,7 +65,6 @@ sample.launch.json
 
 dist/
 build/
-/lib/
 es/
 .cache
 _book/

@@ -43,7 +43,6 @@
   ],
   "precommit": [
     "lint:fix",
-    "coverage",
     "build",
     "status"
   ],
